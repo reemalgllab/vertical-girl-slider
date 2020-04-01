@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+   <link rel="stylesheet" href="jquery-ui/jquery-ui.css" />
+  <script type="text/javascript" src="jquery-ui/jquery.js"></script>
+  <script type="text/javascript" src="jquery-ui/jquery-ui.js"></script>
+  <script>
+    $("document").ready(function(){
+    $("#if-the-num1").css("display","none");
+    $("#if-the-num2").css("display","none");
+    $("#if-the-num3").css("display","none");
+    $("#if-the-num4").css("display","none");
+    $("#if-the-num5").css("display","none");
+ 
+ });
+ $( function() {
+    $( "#slider-vertical" ).slider({
+      orientation: "vertical",
+      range: "min",
+      min: 0,
+      max: 5,
+      value: 0,
+      slide: function( event, ui ) {
+        $( "#amount" ).val( ui.value );
+          if(ui.value==0){
+          $("#if-the-num1").css("display","none");
+           $("#if-the-num2").css("display","none");
+            $("#if-the-num3").css("display","none");
+             $("#if-the-num4").css("display","none");
+              $("#if-the-num5").css("display","none");
+        }
+        if(ui.value==1){
+          $("#if-the-num1").css("display","inline-block");
+           $("#if-the-num2").css("display","none");
+            $("#if-the-num3").css("display","none");
+             $("#if-the-num4").css("display","none");
+              $("#if-the-num5").css("display","none");
+        }
+          if(ui.value==2){
+          $("#if-the-num2").css("display","inline-block");
+           $("#if-the-num1").css("display","none");
+            $("#if-the-num3").css("display","none");
+             $("#if-the-num4").css("display","none");
+              $("#if-the-num5").css("display","none");
+        }
+          if(ui.value==3){
+          $("#if-the-num3").css("display","inline-block");
+           $("#if-the-num1").css("display","none");
+            $("#if-the-num2").css("display","none");
+             $("#if-the-num4").css("display","none");
+              $("#if-the-num5").css("display","none");
+        }
+          if(ui.value==4){
+           $("#if-the-num4").css("display","inline-block");
+            $("#if-the-num1").css("display","none");
+            $("#if-the-num3").css("display","none");
+             $("#if-the-num2").css("display","none");
+              $("#if-the-num5").css("display","none");
+        }
+          if(ui.value==5){
+           $("#if-the-num5").css("display","inline-block");
+            $("#if-the-num1").css("display","none");
+            $("#if-the-num3").css("display","none");
+             $("#if-the-num4").css("display","none");
+              $("#if-the-num2").css("display","none");
+        }
+      }
+    });
+    $( "#amount" ).val( $( "#slider-vertical" ).slider( "value" ) );
+
+  } );
+</script>
+</head>
+<body>
+ 
+<p>
+  <label for="amount">girls</label>
+  <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+</p>
+ 
+<div id="slider-vertical" style="height:200px;"></div>
+  <div id="if-the-num1">
+  <img src="g.jpg">
+ 
+</div>
+ <div id="if-the-num2">
+  <img src="g.jpg">
+  <img src="g.jpg">
+</div>
+ <div id="if-the-num3">
+  <img src="g.jpg">
+  <img src="g.jpg">
+  <img src="g.jpg">
+</div>
+ <div id="if-the-num4">
+  <img src="g.jpg">
+  <img src="g.jpg">
+  <img src="g.jpg">
+  <img src="g.jpg">
+</div>
+ <div id="if-the-num5">
+  <img src="g.jpg">
+  <img src="g.jpg">
+  <img src="g.jpg">
+  <img src="g.jpg">
+  <img src="g.jpg">
+</div>
+ <div class="img"></div>
+</body>
+</html>
